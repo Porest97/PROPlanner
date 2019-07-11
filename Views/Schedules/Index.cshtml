@@ -1,0 +1,101 @@
+﻿@model IEnumerable<PROPlanner.Models.DataModels.Schedule>
+
+@{
+    ViewData["Title"] = "Schedules";
+}
+
+<h1>Schedules</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            @*<th>
+            @Html.DisplayNameFor(model => model.ScheduleStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleWeek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleDescription)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Person)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDay1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDay3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDay4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDay5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalWorkedHours)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @*   <td>
+            @Html.DisplayFor(modelItem => item.ScheduleStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleWeek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleDescription)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDay.WorkingDayTimes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDay1.WorkingDayTimes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDay3.WorkingDayTimes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDay4.WorkingDayTimes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDay5.WorkingDayTimes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalWorkedHours)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

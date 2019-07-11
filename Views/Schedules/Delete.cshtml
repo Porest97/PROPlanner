@@ -1,0 +1,93 @@
+﻿@model PROPlanner.Models.DataModels.Schedule
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduleStartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduleStartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduleEndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduleEndDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduleWeek)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduleWeek)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduleName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduleDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduleDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Person)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDay.WorkingDayTimes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDay1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDay1.WorkingDayTimes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDay3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDay3.WorkingDayTimes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDay4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDay4.WorkingDayTimes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDay5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDay5.WorkingDayTimes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalWorkedHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TotalWorkedHours)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

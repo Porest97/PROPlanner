@@ -1,0 +1,42 @@
+﻿@model PROPlanner.Models.DataModels.WorkingDay
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WorkingDay</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDayName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDayName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDayStart)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDayStart)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkingDayEnd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WorkingDayEnd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HoursWorked)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HoursWorked)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

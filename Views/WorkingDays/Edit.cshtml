@@ -1,0 +1,49 @@
+﻿@model PROPlanner.Models.DataModels.WorkingDay
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>WorkingDay</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="WorkingDayName" class="control-label"></label>
+                <input asp-for="WorkingDayName" class="form-control" />
+                <span asp-validation-for="WorkingDayName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingDayStart" class="control-label"></label>
+                <input asp-for="WorkingDayStart" class="form-control" />
+                <span asp-validation-for="WorkingDayStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingDayEnd" class="control-label"></label>
+                <input asp-for="WorkingDayEnd" class="form-control" />
+                <span asp-validation-for="WorkingDayEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoursWorked" class="control-label"></label>
+                <input asp-for="HoursWorked" class="form-control" />
+                <span asp-validation-for="HoursWorked" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
