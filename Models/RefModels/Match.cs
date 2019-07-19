@@ -12,13 +12,16 @@ namespace PROPlanner.Models.RefModels
     {
         public int Id { get; set; }
 
-        [Display(Name = "Match Cat")]
+        [Display(Name = "TSM #")]
+        public string TSMNumber { get; set; }
+
+        [Display(Name = "Age")]
         public int? GameCategoryId { get; set; }
-        [Display(Name = "Match Cat")]
+        [Display(Name = "Age")]
         [ForeignKey("GameCategoryId")]
         public GameCategory GameCategory { get; set; }
 
-        [Display(Name = "Game #")]
+        [Display(Name = "#")]
         public string GameNumber { get; set; }
 
         [Display(Name = "Date&Time")]
@@ -30,15 +33,15 @@ namespace PROPlanner.Models.RefModels
         [ForeignKey("ArenaId")]
         public Arena Arena { get; set; }
 
-        [Display(Name = "Home Team")]
+        [Display(Name = "Home")]
         public int? TeamId { get; set; }
-        [Display(Name = "Home Team")]
+        [Display(Name = "Home")]
         [ForeignKey("TeamId")]
         public Team HomeTeam { get; set; }
 
-        [Display(Name = "Away Team")]
+        [Display(Name = "Away")]
         public int? TeamId1 { get; set; }
-        [Display(Name = "Away Team")]
+        [Display(Name = "Away")]
         [ForeignKey("TeamId1")]
         public Team AwayTeam { get; set; }
 
@@ -59,7 +62,7 @@ namespace PROPlanner.Models.RefModels
         [Display(Name = "HD")]
         public int? RefereeId1 { get; set; }
         [Display(Name = "HD")]
-        [ForeignKey("RerfereeId1")]
+        [ForeignKey("RefereeId1")]
         public Referee HD2 { get; set; }
 
         [Display(Name = "LD")]
@@ -74,9 +77,9 @@ namespace PROPlanner.Models.RefModels
         [ForeignKey("RefereeId3")]
         public Referee LD2 { get; set; }
 
-        [Display(Name = "Played ?")]
+        [Display(Name = "Played")]
         public bool Played { get; set; }
-        [Display(Name = "Payed ?")]
+        [Display(Name = "Payed")]
         public bool Payed { get; set; }
 
     }

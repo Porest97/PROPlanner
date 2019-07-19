@@ -19,6 +19,11 @@ namespace PROPlanner.Controllers
             return View();
         }
 
+        public IActionResult RefMatches()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

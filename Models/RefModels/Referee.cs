@@ -50,6 +50,13 @@ namespace PROPlanner.Models.RefModels
         public int? RefereeTypeId { get; set; }
         [Display(Name = "Ref Type")]
         [ForeignKey("RefereeTypeId")]
-        public RefreeType PersonType { get; set; }
+        public RefereeType RefereeType { get; set; }
+
+        public string Swish { get; set; }
+
+        public string BankAccount { get; set; }
+
+
+
     }
 }

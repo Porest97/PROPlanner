@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PROPlanner.Models;
 
 namespace PROPlanner.Migrations
 {
     [DbContext(typeof(PROPlannerContext))]
-    partial class PROPlannerContextModelSnapshot : ModelSnapshot
+    [Migration("20190711165026_RefereeTypTypoFixed")]
+    partial class RefereeTypTypoFixed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -310,6 +312,8 @@ namespace PROPlanner.Migrations
 
                     b.Property<int?>("RefereeId3");
 
+                    b.Property<int?>("RerfereeId1");
+
                     b.Property<string>("TSMNumber");
 
                     b.Property<int?>("TeamId");
@@ -324,11 +328,11 @@ namespace PROPlanner.Migrations
 
                     b.HasIndex("RefereeId");
 
-                    b.HasIndex("RefereeId1");
-
                     b.HasIndex("RefereeId2");
 
                     b.HasIndex("RefereeId3");
+
+                    b.HasIndex("RerfereeId1");
 
                     b.HasIndex("TeamId");
 
@@ -470,10 +474,6 @@ namespace PROPlanner.Migrations
                         .WithMany()
                         .HasForeignKey("RefereeId");
 
-                    b.HasOne("PROPlanner.Models.RefModels.Referee", "HD2")
-                        .WithMany()
-                        .HasForeignKey("RefereeId1");
-
                     b.HasOne("PROPlanner.Models.RefModels.Referee", "LD1")
                         .WithMany()
                         .HasForeignKey("RefereeId2");
@@ -481,6 +481,10 @@ namespace PROPlanner.Migrations
                     b.HasOne("PROPlanner.Models.RefModels.Referee", "LD2")
                         .WithMany()
                         .HasForeignKey("RefereeId3");
+
+                    b.HasOne("PROPlanner.Models.RefModels.Referee", "HD2")
+                        .WithMany()
+                        .HasForeignKey("RerfereeId1");
 
                     b.HasOne("PROPlanner.Models.DataModels.Team", "HomeTeam")
                         .WithMany()
