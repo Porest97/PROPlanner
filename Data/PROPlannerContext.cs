@@ -38,5 +38,7 @@ namespace PROPlanner.Models
         public DbSet<PROPlanner.Models.RefModels.Referee> Referee { get; set; }
 
         public DbSet<PROPlanner.Models.RefModels.Match> Match { get; set; }
+
+        public DbSet<PROPlanner.Models.RefModels.RefReceipt> RefReceipt { get; set; }
     }
 }

@@ -82,5 +82,7 @@ namespace PROPlanner.Models.RefModels
         [Display(Name = "Payed")]
         public bool Payed { get; set; }
 
+        [Display(Name = "Match")]
+        public string MatchString { get { return string.Format("{0} {1} {2} {3}", TSMNumber, HomeTeam,"-", AwayTeam); } }
     }
 }

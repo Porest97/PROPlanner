@@ -1,0 +1,395 @@
+﻿@model IEnumerable<PROPlanner.Models.RefModels.RefReceipt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Match)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Allowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1LateGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1TravellengthKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1TravelKostperkm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1TravelKost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Toll)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1ParkingFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1TotalPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1Sign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF1To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Allowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2LateGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2TravellengthKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2TravelKostperkm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2TravelKost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Toll)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2ParkingFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2TotalPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2Sign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF2To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Allowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3LateGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3TravellengthKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3TravelKostperkm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3TravelKost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Toll)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3ParkingFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3TotalPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3Sign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF3To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Allowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4LateGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4TravellengthKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4TravelKostperkm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4TravelKost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Toll)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4ParkingFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4TotalPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4Sign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REF4To)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match.MatchString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Allowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1LateGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1TravellengthKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1TravelKostperkm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1TravelKost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Toll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1ParkingFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1TotalPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1Sign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF1To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Allowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2LateGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2TravellengthKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2TravelKostperkm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2TravelKost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Toll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2ParkingFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2TotalPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2Sign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF2To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Allowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3LateGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3TravellengthKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3TravelKostperkm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3TravelKost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Toll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3ParkingFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3TotalPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3Sign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF3To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Allowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4LateGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4TravellengthKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4TravelKostperkm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4TravelKost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Toll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4ParkingFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4TotalPayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4Sign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REF4To)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

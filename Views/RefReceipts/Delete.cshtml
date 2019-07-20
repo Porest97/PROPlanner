@@ -1,0 +1,387 @@
+﻿@model PROPlanner.Models.RefModels.RefReceipt
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RefReceipt</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4.Id)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Fee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Fee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Allowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Allowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1LateGame)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1LateGame)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1TravellengthKm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1TravellengthKm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1TravelKostperkm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1TravelKostperkm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1TravelKost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1TravelKost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Toll)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Toll)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1ParkingFee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1ParkingFee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1TotalPayment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1TotalPayment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Paid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Paid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1Sign)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1Sign)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF1To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF1To)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Fee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Fee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Allowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Allowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2LateGame)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2LateGame)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2TravellengthKm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2TravellengthKm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2TravelKostperkm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2TravelKostperkm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2TravelKost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2TravelKost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Toll)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Toll)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2ParkingFee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2ParkingFee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2TotalPayment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2TotalPayment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Paid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Paid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2Sign)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2Sign)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF2To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF2To)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Fee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Fee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Allowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Allowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3LateGame)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3LateGame)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3TravellengthKm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3TravellengthKm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3TravelKostperkm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3TravelKostperkm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3TravelKost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3TravelKost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Toll)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Toll)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3ParkingFee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3ParkingFee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3TotalPayment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3TotalPayment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Paid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Paid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3Sign)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3Sign)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF3To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF3To)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Fee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Fee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Allowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Allowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4LateGame)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4LateGame)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4TravellengthKm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4TravellengthKm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4TravelKostperkm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4TravelKostperkm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4TravelKost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4TravelKost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Toll)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Toll)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4ParkingFee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4ParkingFee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4TotalPayment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4TotalPayment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Paid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Paid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4Sign)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4Sign)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REF4To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REF4To)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

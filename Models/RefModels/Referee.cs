@@ -52,7 +52,7 @@ namespace PROPlanner.Models.RefModels
         [ForeignKey("RefereeTypeId")]
         public RefereeType RefereeType { get; set; }
 
-        public string Swish { get; set; }
+        public string SwishAccount { get; set; }
 
         public string BankAccount { get; set; }
 

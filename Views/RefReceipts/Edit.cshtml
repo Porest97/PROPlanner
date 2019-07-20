@@ -1,0 +1,331 @@
+﻿@model PROPlanner.Models.RefModels.RefReceipt
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RefReceipt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MatchId" class="control-label"></label>
+                <select asp-for="MatchId" class="form-control" asp-items="ViewBag.MatchId"></select>
+                <span asp-validation-for="MatchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefereeId" class="control-label"></label>
+                <select asp-for="RefereeId" class="form-control" asp-items="ViewBag.RefereeId"></select>
+                <span asp-validation-for="RefereeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefereeId1" class="control-label"></label>
+                <select asp-for="RefereeId1" class="form-control" asp-items="ViewBag.RefereeId1"></select>
+                <span asp-validation-for="RefereeId1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefereeId2" class="control-label"></label>
+                <select asp-for="RefereeId2" class="form-control" asp-items="ViewBag.RefereeId2"></select>
+                <span asp-validation-for="RefereeId2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefereeId3" class="control-label"></label>
+                <select asp-for="RefereeId3" class="form-control" asp-items="ViewBag.RefereeId3"></select>
+                <span asp-validation-for="RefereeId3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1Fee" class="control-label"></label>
+                <input asp-for="REF1Fee" class="form-control" />
+                <span asp-validation-for="REF1Fee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1Allowance" class="control-label"></label>
+                <input asp-for="REF1Allowance" class="form-control" />
+                <span asp-validation-for="REF1Allowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1LateGame" class="control-label"></label>
+                <input asp-for="REF1LateGame" class="form-control" />
+                <span asp-validation-for="REF1LateGame" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1TravellengthKm" class="control-label"></label>
+                <input asp-for="REF1TravellengthKm" class="form-control" />
+                <span asp-validation-for="REF1TravellengthKm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1TravelKostperkm" class="control-label"></label>
+                <input asp-for="REF1TravelKostperkm" class="form-control" />
+                <span asp-validation-for="REF1TravelKostperkm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1TravelKost" class="control-label"></label>
+                <input asp-for="REF1TravelKost" class="form-control" />
+                <span asp-validation-for="REF1TravelKost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1Toll" class="control-label"></label>
+                <input asp-for="REF1Toll" class="form-control" />
+                <span asp-validation-for="REF1Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1ParkingFee" class="control-label"></label>
+                <input asp-for="REF1ParkingFee" class="form-control" />
+                <span asp-validation-for="REF1ParkingFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1TotalPayment" class="control-label"></label>
+                <input asp-for="REF1TotalPayment" class="form-control" />
+                <span asp-validation-for="REF1TotalPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="REF1Paid" /> @Html.DisplayNameFor(model => model.REF1Paid)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1Date" class="control-label"></label>
+                <input asp-for="REF1Date" class="form-control" />
+                <span asp-validation-for="REF1Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1Sign" class="control-label"></label>
+                <input asp-for="REF1Sign" class="form-control" />
+                <span asp-validation-for="REF1Sign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1From" class="control-label"></label>
+                <input asp-for="REF1From" class="form-control" />
+                <span asp-validation-for="REF1From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF1To" class="control-label"></label>
+                <input asp-for="REF1To" class="form-control" />
+                <span asp-validation-for="REF1To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2Fee" class="control-label"></label>
+                <input asp-for="REF2Fee" class="form-control" />
+                <span asp-validation-for="REF2Fee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2Allowance" class="control-label"></label>
+                <input asp-for="REF2Allowance" class="form-control" />
+                <span asp-validation-for="REF2Allowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2LateGame" class="control-label"></label>
+                <input asp-for="REF2LateGame" class="form-control" />
+                <span asp-validation-for="REF2LateGame" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2TravellengthKm" class="control-label"></label>
+                <input asp-for="REF2TravellengthKm" class="form-control" />
+                <span asp-validation-for="REF2TravellengthKm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2TravelKostperkm" class="control-label"></label>
+                <input asp-for="REF2TravelKostperkm" class="form-control" />
+                <span asp-validation-for="REF2TravelKostperkm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2TravelKost" class="control-label"></label>
+                <input asp-for="REF2TravelKost" class="form-control" />
+                <span asp-validation-for="REF2TravelKost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2Toll" class="control-label"></label>
+                <input asp-for="REF2Toll" class="form-control" />
+                <span asp-validation-for="REF2Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2ParkingFee" class="control-label"></label>
+                <input asp-for="REF2ParkingFee" class="form-control" />
+                <span asp-validation-for="REF2ParkingFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2TotalPayment" class="control-label"></label>
+                <input asp-for="REF2TotalPayment" class="form-control" />
+                <span asp-validation-for="REF2TotalPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="REF2Paid" /> @Html.DisplayNameFor(model => model.REF2Paid)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2Date" class="control-label"></label>
+                <input asp-for="REF2Date" class="form-control" />
+                <span asp-validation-for="REF2Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2Sign" class="control-label"></label>
+                <input asp-for="REF2Sign" class="form-control" />
+                <span asp-validation-for="REF2Sign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2From" class="control-label"></label>
+                <input asp-for="REF2From" class="form-control" />
+                <span asp-validation-for="REF2From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF2To" class="control-label"></label>
+                <input asp-for="REF2To" class="form-control" />
+                <span asp-validation-for="REF2To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3Fee" class="control-label"></label>
+                <input asp-for="REF3Fee" class="form-control" />
+                <span asp-validation-for="REF3Fee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3Allowance" class="control-label"></label>
+                <input asp-for="REF3Allowance" class="form-control" />
+                <span asp-validation-for="REF3Allowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3LateGame" class="control-label"></label>
+                <input asp-for="REF3LateGame" class="form-control" />
+                <span asp-validation-for="REF3LateGame" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3TravellengthKm" class="control-label"></label>
+                <input asp-for="REF3TravellengthKm" class="form-control" />
+                <span asp-validation-for="REF3TravellengthKm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3TravelKostperkm" class="control-label"></label>
+                <input asp-for="REF3TravelKostperkm" class="form-control" />
+                <span asp-validation-for="REF3TravelKostperkm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3TravelKost" class="control-label"></label>
+                <input asp-for="REF3TravelKost" class="form-control" />
+                <span asp-validation-for="REF3TravelKost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3Toll" class="control-label"></label>
+                <input asp-for="REF3Toll" class="form-control" />
+                <span asp-validation-for="REF3Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3ParkingFee" class="control-label"></label>
+                <input asp-for="REF3ParkingFee" class="form-control" />
+                <span asp-validation-for="REF3ParkingFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3TotalPayment" class="control-label"></label>
+                <input asp-for="REF3TotalPayment" class="form-control" />
+                <span asp-validation-for="REF3TotalPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="REF3Paid" /> @Html.DisplayNameFor(model => model.REF3Paid)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3Date" class="control-label"></label>
+                <input asp-for="REF3Date" class="form-control" />
+                <span asp-validation-for="REF3Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3Sign" class="control-label"></label>
+                <input asp-for="REF3Sign" class="form-control" />
+                <span asp-validation-for="REF3Sign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3From" class="control-label"></label>
+                <input asp-for="REF3From" class="form-control" />
+                <span asp-validation-for="REF3From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF3To" class="control-label"></label>
+                <input asp-for="REF3To" class="form-control" />
+                <span asp-validation-for="REF3To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4Fee" class="control-label"></label>
+                <input asp-for="REF4Fee" class="form-control" />
+                <span asp-validation-for="REF4Fee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4Allowance" class="control-label"></label>
+                <input asp-for="REF4Allowance" class="form-control" />
+                <span asp-validation-for="REF4Allowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4LateGame" class="control-label"></label>
+                <input asp-for="REF4LateGame" class="form-control" />
+                <span asp-validation-for="REF4LateGame" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4TravellengthKm" class="control-label"></label>
+                <input asp-for="REF4TravellengthKm" class="form-control" />
+                <span asp-validation-for="REF4TravellengthKm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4TravelKostperkm" class="control-label"></label>
+                <input asp-for="REF4TravelKostperkm" class="form-control" />
+                <span asp-validation-for="REF4TravelKostperkm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4TravelKost" class="control-label"></label>
+                <input asp-for="REF4TravelKost" class="form-control" />
+                <span asp-validation-for="REF4TravelKost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4Toll" class="control-label"></label>
+                <input asp-for="REF4Toll" class="form-control" />
+                <span asp-validation-for="REF4Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4ParkingFee" class="control-label"></label>
+                <input asp-for="REF4ParkingFee" class="form-control" />
+                <span asp-validation-for="REF4ParkingFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4TotalPayment" class="control-label"></label>
+                <input asp-for="REF4TotalPayment" class="form-control" />
+                <span asp-validation-for="REF4TotalPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="REF4Paid" /> @Html.DisplayNameFor(model => model.REF4Paid)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4Date" class="control-label"></label>
+                <input asp-for="REF4Date" class="form-control" />
+                <span asp-validation-for="REF4Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4Sign" class="control-label"></label>
+                <input asp-for="REF4Sign" class="form-control" />
+                <span asp-validation-for="REF4Sign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4From" class="control-label"></label>
+                <input asp-for="REF4From" class="form-control" />
+                <span asp-validation-for="REF4From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REF4To" class="control-label"></label>
+                <input asp-for="REF4To" class="form-control" />
+                <span asp-validation-for="REF4To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

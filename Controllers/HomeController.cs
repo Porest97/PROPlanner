@@ -23,6 +23,10 @@ namespace PROPlanner.Controllers
         {
             return View();
         }
+        public IActionResult RefAccounting()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
