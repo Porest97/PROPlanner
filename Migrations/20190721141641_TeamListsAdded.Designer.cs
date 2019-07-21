@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PROPlanner.Models;
 
 namespace PROPlanner.Migrations
 {
     [DbContext(typeof(PROPlannerContext))]
-    partial class PROPlannerContextModelSnapshot : ModelSnapshot
+    [Migration("20190721141641_TeamListsAdded")]
+    partial class TeamListsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

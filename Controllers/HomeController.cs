@@ -27,6 +27,10 @@ namespace PROPlanner.Controllers
         {
             return View();
         }
+        public IActionResult Tournaments()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PROPlanner.Models;
 
 namespace PROPlanner.Migrations
 {
     [DbContext(typeof(PROPlannerContext))]
-    partial class PROPlannerContextModelSnapshot : ModelSnapshot
+    [Migration("20190721071004_TournamentsAdded")]
+    partial class TournamentsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -175,10 +177,6 @@ namespace PROPlanner.Migrations
 
                     b.Property<string>("PhoneNumber2");
 
-                    b.Property<string>("PlayerPossition");
-
-                    b.Property<string>("SSN");
-
                     b.Property<string>("StreetAddress");
 
                     b.Property<string>("ZipCode");
@@ -263,121 +261,6 @@ namespace PROPlanner.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Team");
-                });
-
-            modelBuilder.Entity("PROPlanner.Models.DataModels.TeamList", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("PersonId");
-
-                    b.Property<int?>("PersonId1");
-
-                    b.Property<int?>("PersonId10");
-
-                    b.Property<int?>("PersonId11");
-
-                    b.Property<int?>("PersonId12");
-
-                    b.Property<int?>("PersonId13");
-
-                    b.Property<int?>("PersonId14");
-
-                    b.Property<int?>("PersonId15");
-
-                    b.Property<int?>("PersonId16");
-
-                    b.Property<int?>("PersonId17");
-
-                    b.Property<int?>("PersonId18");
-
-                    b.Property<int?>("PersonId19");
-
-                    b.Property<int?>("PersonId2");
-
-                    b.Property<int?>("PersonId20");
-
-                    b.Property<int?>("PersonId21");
-
-                    b.Property<int?>("PersonId22");
-
-                    b.Property<int?>("PersonId23");
-
-                    b.Property<int?>("PersonId24");
-
-                    b.Property<int?>("PersonId3");
-
-                    b.Property<int?>("PersonId4");
-
-                    b.Property<int?>("PersonId5");
-
-                    b.Property<int?>("PersonId6");
-
-                    b.Property<int?>("PersonId7");
-
-                    b.Property<int?>("PersonId8");
-
-                    b.Property<int?>("PersonId9");
-
-                    b.Property<int?>("TeamId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PersonId");
-
-                    b.HasIndex("PersonId1");
-
-                    b.HasIndex("PersonId10");
-
-                    b.HasIndex("PersonId11");
-
-                    b.HasIndex("PersonId12");
-
-                    b.HasIndex("PersonId13");
-
-                    b.HasIndex("PersonId14");
-
-                    b.HasIndex("PersonId15");
-
-                    b.HasIndex("PersonId16");
-
-                    b.HasIndex("PersonId17");
-
-                    b.HasIndex("PersonId18");
-
-                    b.HasIndex("PersonId19");
-
-                    b.HasIndex("PersonId2");
-
-                    b.HasIndex("PersonId20");
-
-                    b.HasIndex("PersonId21");
-
-                    b.HasIndex("PersonId22");
-
-                    b.HasIndex("PersonId23");
-
-                    b.HasIndex("PersonId24");
-
-                    b.HasIndex("PersonId3");
-
-                    b.HasIndex("PersonId4");
-
-                    b.HasIndex("PersonId5");
-
-                    b.HasIndex("PersonId6");
-
-                    b.HasIndex("PersonId7");
-
-                    b.HasIndex("PersonId8");
-
-                    b.HasIndex("PersonId9");
-
-                    b.HasIndex("TeamId");
-
-                    b.ToTable("TeamList");
                 });
 
             modelBuilder.Entity("PROPlanner.Models.DataModels.WorkingDay", b =>
@@ -737,113 +620,6 @@ namespace PROPlanner.Migrations
                     b.HasOne("PROPlanner.Models.DataModels.WorkingDay", "WorkingDay5")
                         .WithMany()
                         .HasForeignKey("WorkingDayId4");
-                });
-
-            modelBuilder.Entity("PROPlanner.Models.DataModels.TeamList", b =>
-                {
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "HeadCoach")
-                        .WithMany()
-                        .HasForeignKey("PersonId");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "AssCoach")
-                        .WithMany()
-                        .HasForeignKey("PersonId1");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense6")
-                        .WithMany()
-                        .HasForeignKey("PersonId10");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense7")
-                        .WithMany()
-                        .HasForeignKey("PersonId11");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense8")
-                        .WithMany()
-                        .HasForeignKey("PersonId12");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense1")
-                        .WithMany()
-                        .HasForeignKey("PersonId13");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense2")
-                        .WithMany()
-                        .HasForeignKey("PersonId14");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense3")
-                        .WithMany()
-                        .HasForeignKey("PersonId15");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense4")
-                        .WithMany()
-                        .HasForeignKey("PersonId16");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense5")
-                        .WithMany()
-                        .HasForeignKey("PersonId17");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense6")
-                        .WithMany()
-                        .HasForeignKey("PersonId18");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense7")
-                        .WithMany()
-                        .HasForeignKey("PersonId19");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "TeamLeader")
-                        .WithMany()
-                        .HasForeignKey("PersonId2");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense8")
-                        .WithMany()
-                        .HasForeignKey("PersonId20");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense9")
-                        .WithMany()
-                        .HasForeignKey("PersonId21");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense10")
-                        .WithMany()
-                        .HasForeignKey("PersonId22");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense11")
-                        .WithMany()
-                        .HasForeignKey("PersonId23");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Offense12")
-                        .WithMany()
-                        .HasForeignKey("PersonId24");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Goalie1")
-                        .WithMany()
-                        .HasForeignKey("PersonId3");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Goalie2")
-                        .WithMany()
-                        .HasForeignKey("PersonId4");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense1")
-                        .WithMany()
-                        .HasForeignKey("PersonId5");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense2")
-                        .WithMany()
-                        .HasForeignKey("PersonId6");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense3")
-                        .WithMany()
-                        .HasForeignKey("PersonId7");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense4")
-                        .WithMany()
-                        .HasForeignKey("PersonId8");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Person", "Defense5")
-                        .WithMany()
-                        .HasForeignKey("PersonId9");
-
-                    b.HasOne("PROPlanner.Models.DataModels.Team", "Team")
-                        .WithMany()
-                        .HasForeignKey("TeamId");
                 });
 
             modelBuilder.Entity("PROPlanner.Models.RefModels.Match", b =>

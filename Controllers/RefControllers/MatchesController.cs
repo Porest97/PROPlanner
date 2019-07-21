@@ -22,7 +22,16 @@ namespace PROPlanner.Controllers.RefControllers
         // GET: Matches
         public async Task<IActionResult> Index()
         {
-            var pROPlannerContext = _context.Match.Include(m => m.Arena).Include(m => m.AwayTeam).Include(m => m.GameCategory).Include(m => m.HD1).Include(m => m.HD2).Include(m => m.HomeTeam).Include(m => m.LD1).Include(m => m.LD2);
+            var pROPlannerContext = _context.Match
+                .Include(m => m.Arena)
+                .Include(m => m.AwayTeam)
+                .Include(m => m.GameCategory)
+                .Include(m => m.HD1)
+                .Include(m => m.HD2)
+                .Include(m => m.HomeTeam)
+                .Include(m => m.LD1)
+                .Include(m => m.LD2)
+                .Include(m=> m.Tournament);
             return View(await pROPlannerContext.ToListAsync());
         }
 
@@ -43,6 +52,7 @@ namespace PROPlanner.Controllers.RefControllers
                 .Include(m => m.HomeTeam)
                 .Include(m => m.LD1)
                 .Include(m => m.LD2)
+                .Include(m => m.Tournament)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (match == null)
             {
@@ -63,6 +73,7 @@ namespace PROPlanner.Controllers.RefControllers
             ViewData["TeamId"] = new SelectList(_context.Team, "Id", "TeamName");
             ViewData["RefereeId2"] = new SelectList(_context.Referee, "Id", "FullName");
             ViewData["RefereeId3"] = new SelectList(_context.Referee, "Id", "FullName");
+            ViewData["TournamentId"] = new SelectList(_context.Tournament, "Id", "TournamentName");
             return View();
         }
 
@@ -71,7 +82,7 @@ namespace PROPlanner.Controllers.RefControllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TSMNumber,GameCategoryId,GameNumber,GameDateTime,ArenaId,TeamId,TeamId1,HomeTeamScore,AwayTeamScore,RefereeId,RefereeId1,RefereeId2,RefereeId3,Played,Payed")] Match match)
+        public async Task<IActionResult> Create([Bind("Id,TSMNumber,GameCategoryId,GameNumber,GameDateTime,ArenaId,TeamId,TeamId1,HomeTeamScore,AwayTeamScore,RefereeId,RefereeId1,RefereeId2,RefereeId3,Played,Payed,TournamentId")] Match match)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +98,7 @@ namespace PROPlanner.Controllers.RefControllers
             ViewData["TeamId"] = new SelectList(_context.Team, "Id", "TeamName", match.TeamId);
             ViewData["RefereeId2"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId2);
             ViewData["RefereeId3"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId3);
+            ViewData["TournamentId"] = new SelectList(_context.Tournament, "Id", "TournamentName", match.TournamentId);
             return View(match);
         }
 
@@ -111,6 +123,7 @@ namespace PROPlanner.Controllers.RefControllers
             ViewData["TeamId"] = new SelectList(_context.Team, "Id", "TeamName", match.TeamId);
             ViewData["RefereeId2"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId2);
             ViewData["RefereeId3"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId3);
+            ViewData["TournamentId"] = new SelectList(_context.Tournament, "Id", "TournamentName", match.TournamentId);
             return View(match);
         }
 
@@ -119,7 +132,7 @@ namespace PROPlanner.Controllers.RefControllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TSMNumber,GameCategoryId,GameNumber,GameDateTime,ArenaId,TeamId,TeamId1,HomeTeamScore,AwayTeamScore,RefereeId,RefereeId1,RefereeId2,RefereeId3,Played,Payed")] Match match)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TSMNumber,GameCategoryId,GameNumber,GameDateTime,ArenaId,TeamId,TeamId1,HomeTeamScore,AwayTeamScore,RefereeId,RefereeId1,RefereeId2,RefereeId3,Played,Payed,TournamentId")] Match match)
         {
             if (id != match.Id)
             {
@@ -154,6 +167,7 @@ namespace PROPlanner.Controllers.RefControllers
             ViewData["TeamId"] = new SelectList(_context.Team, "Id", "TeamName", match.TeamId);
             ViewData["RefereeId2"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId2);
             ViewData["RefereeId3"] = new SelectList(_context.Referee, "Id", "FullName", match.RefereeId3);
+            ViewData["TournamentId"] = new SelectList(_context.Tournament, "Id", "TournamentName", match.TournamentId);
             return View(match);
         }
 
@@ -174,6 +188,7 @@ namespace PROPlanner.Controllers.RefControllers
                 .Include(m => m.HomeTeam)
                 .Include(m => m.LD1)
                 .Include(m => m.LD2)
+                .Include(m => m.Tournament)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (match == null)
             {

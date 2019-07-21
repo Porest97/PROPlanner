@@ -12,19 +12,19 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            @*<th>
+            @* <th>
             @Html.DisplayNameFor(model => model.ScheduleStartDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ScheduleEndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ScheduleWeek)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ScheduleName)
-        </th>
-        <th>
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.ScheduleWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScheduleName)
+            </th>
+            @*   <th>
             @Html.DisplayNameFor(model => model.ScheduleDescription)
         </th>*@
             <th>
@@ -54,23 +54,23 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            @*   <td>
+            @*<td>
             @Html.DisplayFor(modelItem => item.ScheduleStartDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ScheduleEndDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ScheduleWeek)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ScheduleName)
-        </td>
-        <td>
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.ScheduleWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScheduleName)
+            </td>
+            @*   <td>
             @Html.DisplayFor(modelItem => item.ScheduleDescription)
         </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.Person.FirstName)
+                @Html.DisplayFor(modelItem => item.Person.FullName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.WorkingDay.WorkingDayTimes)

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PROPlanner.Models.DataModels;
 using PROPlanner.Models.RefModels;
+using PROPlanner.Models;
 
 namespace PROPlanner.Models
 {
@@ -40,5 +41,9 @@ namespace PROPlanner.Models
         public DbSet<PROPlanner.Models.RefModels.Match> Match { get; set; }
 
         public DbSet<PROPlanner.Models.RefModels.RefReceipt> RefReceipt { get; set; }
+
+        public DbSet<PROPlanner.Models.Tournament> Tournament { get; set; }
+
+        public DbSet<PROPlanner.Models.DataModels.TeamList> TeamList { get; set; }
     }
 }

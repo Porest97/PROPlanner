@@ -58,6 +58,15 @@ namespace PROPlanner.Models.DataModels
         [ForeignKey("CompanyId")]
         public Company Company { get; set; }
 
+        [Display(Name = "Pos#")]
+        public string PlayerPossition { get; set; }
+
+        [Display(Name = "SSN#")]
+        public string SSN { get; set; }
+
+        [Display(Name = "Player")]
+        public string PlayerString { get { return string.Format("{0} {1} {2} ", FullName, PlayerPossition, SSN); } }
+
 
     }
 }

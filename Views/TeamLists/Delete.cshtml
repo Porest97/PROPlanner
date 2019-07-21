@@ -1,0 +1,177 @@
+﻿@model PROPlanner.Models.DataModels.TeamList
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TeamList</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Team.TeamName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HeadCoach)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HeadCoach.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AssCoach)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AssCoach.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamLeader)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TeamLeader.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goalie1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goalie1.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goalie2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goalie2.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense1.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense2.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense3.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense4.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense5.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense6.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense7)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense7.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Defense8)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Defense8.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense1.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense2.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense3.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense4.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense5.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense6.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense7)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense7.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense8)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense8.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense9)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense9.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense10)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense10.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense11)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense11.PlayerString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Offense12)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Offense12.PlayerString)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

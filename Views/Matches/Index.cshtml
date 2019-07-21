@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Tournament)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TSMNumber)
             </th>
             <th>
@@ -36,7 +39,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Result)
             </th>
-                        <th>
+            <th>
                 @Html.DisplayNameFor(model => model.HD1)
             </th>
             <th>
@@ -58,8 +61,11 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.OrderBy(g=>g.GameDateTime)) {
+@foreach (var item in Model.OrderBy(g=>g.Tournament.TournamentName)) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tournament.TournamentName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TSMNumber)
             </td>
@@ -84,7 +90,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Result)
             </td>
-            
+
             <td>
                 @Html.DisplayFor(modelItem => item.HD1.FullName)
             </td>

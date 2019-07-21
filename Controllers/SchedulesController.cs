@@ -36,7 +36,7 @@ namespace PROPlanner.Controllers
                 .Include(s => s.WorkingDay3)
                 .Include(s => s.WorkingDay4)
                 .Include(s => s.WorkingDay5);
-            schedule.TotalWorkedHours = schedule.WorkingDay.HoursWorked + schedule.WorkingDay1.HoursWorked + schedule.WorkingDay3.HoursWorked + schedule.WorkingDay4.HoursWorked + schedule.WorkingDay5.HoursWorked;
+            
             return View(schedule);
         }
 
@@ -86,7 +86,7 @@ namespace PROPlanner.Controllers
             if (ModelState.IsValid)
             {
                 var pROPlannerContext = _context.Schedule.Include(s => s.Person).Include(s => s.WorkingDay).Include(s => s.WorkingDay1).Include(s => s.WorkingDay3).Include(s => s.WorkingDay4).Include(s => s.WorkingDay5);
-                schedule.TotalWorkedHours = schedule.WorkingDay.HoursWorked + schedule.WorkingDay1.HoursWorked + schedule.WorkingDay3.HoursWorked + schedule.WorkingDay4.HoursWorked + schedule.WorkingDay5.HoursWorked;
+                
                 _context.Add(schedule);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -139,7 +139,7 @@ namespace PROPlanner.Controllers
                 try
                 {
                     var pROPlannerContext = _context.Schedule.Include(s => s.Person).Include(s => s.WorkingDay).Include(s => s.WorkingDay1).Include(s => s.WorkingDay3).Include(s => s.WorkingDay4).Include(s => s.WorkingDay5);
-                    schedule.TotalWorkedHours = schedule.WorkingDay.HoursWorked + schedule.WorkingDay1.HoursWorked + schedule.WorkingDay3.HoursWorked + schedule.WorkingDay4.HoursWorked + schedule.WorkingDay5.HoursWorked;
+                    
                     _context.Update(schedule);
                     await _context.SaveChangesAsync();
                 }

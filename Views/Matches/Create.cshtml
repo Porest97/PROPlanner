@@ -13,13 +13,18 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="TournamentId" class="control-label"></label>
+                <select asp-for="TournamentId" class="form-control" asp-items="ViewBag.TournamentId"></select>
+                <span asp-validation-for="TournamentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="TSMNumber" class="control-label"></label>
                 <input asp-for="TSMNumber" class="form-control" />
                 <span asp-validation-for="TSMNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="GameCategoryId" class="control-label"></label>
-                <select asp-for="GameCategoryId" class ="form-control" asp-items="ViewBag.GameCategoryId"></select>
+                <select asp-for="GameCategoryId" class="form-control" asp-items="ViewBag.GameCategoryId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="GameNumber" class="control-label"></label>
@@ -33,15 +38,15 @@
             </div>
             <div class="form-group">
                 <label asp-for="ArenaId" class="control-label"></label>
-                <select asp-for="ArenaId" class ="form-control" asp-items="ViewBag.ArenaId"></select>
+                <select asp-for="ArenaId" class="form-control" asp-items="ViewBag.ArenaId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="TeamId" class="control-label"></label>
-                <select asp-for="TeamId" class ="form-control" asp-items="ViewBag.TeamId"></select>
+                <select asp-for="TeamId" class="form-control" asp-items="ViewBag.TeamId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="TeamId1" class="control-label"></label>
-                <select asp-for="TeamId1" class ="form-control" asp-items="ViewBag.TeamId1"></select>
+                <select asp-for="TeamId1" class="form-control" asp-items="ViewBag.TeamId1"></select>
             </div>
             <div class="form-group">
                 <label asp-for="HomeTeamScore" class="control-label"></label>
@@ -55,19 +60,19 @@
             </div>
             <div class="form-group">
                 <label asp-for="RefereeId" class="control-label"></label>
-                <select asp-for="RefereeId" class ="form-control" asp-items="ViewBag.RefereeId"></select>
+                <select asp-for="RefereeId" class="form-control" asp-items="ViewBag.RefereeId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="RefereeId1" class="control-label"></label>
-                <select asp-for="RefereeId1" class ="form-control" asp-items="ViewBag.RefereeId1"></select>
+                <select asp-for="RefereeId1" class="form-control" asp-items="ViewBag.RefereeId1"></select>
             </div>
             <div class="form-group">
                 <label asp-for="RefereeId2" class="control-label"></label>
-                <select asp-for="RefereeId2" class ="form-control" asp-items="ViewBag.RefereeId2"></select>
+                <select asp-for="RefereeId2" class="form-control" asp-items="ViewBag.RefereeId2"></select>
             </div>
             <div class="form-group">
                 <label asp-for="RefereeId3" class="control-label"></label>
-                <select asp-for="RefereeId3" class ="form-control" asp-items="ViewBag.RefereeId3"></select>
+                <select asp-for="RefereeId3" class="form-control" asp-items="ViewBag.RefereeId3"></select>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">

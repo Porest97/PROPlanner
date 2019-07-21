@@ -6,27 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PROPlanner.Models;
-using PROPlanner.Models.DataModels;
 
-namespace PROPlanner.Controllers
+namespace PROPlanner.Controllers.TournamentControllers
 {
-    public class PeopleController : Controller
+    public class TournamentsController : Controller
     {
         private readonly PROPlannerContext _context;
 
-        public PeopleController(PROPlannerContext context)
+        public TournamentsController(PROPlannerContext context)
         {
             _context = context;
         }
 
-        // GET: People
+        // GET: Tournaments
         public async Task<IActionResult> Index()
         {
-            var pROPlannerContext = _context.Person.Include(p => p.Company).Include(p => p.PersonType);
-            return View(await pROPlannerContext.ToListAsync());
+            var pROPlannerContext = _context.Tournament
+                .Include(t => t.Matches);
+            return View(await _context.Tournament.ToListAsync());
         }
 
-        // GET: People/Details/5
+        // GET: Tournaments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,45 +34,40 @@ namespace PROPlanner.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.Company)
-                .Include(p => p.PersonType)
+            var tournament = await _context.Tournament
+                .Include(t => t.Matches)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (person == null)
+            if (tournament == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(tournament);
         }
 
-        // GET: People/Create
+        // GET: Tournaments/Create
         public IActionResult Create()
         {
-            ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "CompanyName");
-            ViewData["PersonTypeId"] = new SelectList(_context.Set<PersonType>(), "Id", "PersonTypeName");
             return View();
         }
 
-        // POST: People/Create
+        // POST: Tournaments/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,StreetAddress,ZipCode,City,Country,PhoneNumber1,PhoneNumber2,Email,PersonTypeId,CompanyId,PlayerPossition,SSN")] Person person)
+        public async Task<IActionResult> Create([Bind("Id,TournamentName")] Tournament tournament)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(tournament);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "CompanyName", person.CompanyId);
-            ViewData["PersonTypeId"] = new SelectList(_context.Set<PersonType>(), "Id", "PersonTypeName", person.PersonTypeId);
-            return View(person);
+            return View(tournament);
         }
 
-        // GET: People/Edit/5
+        // GET: Tournaments/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,24 +75,22 @@ namespace PROPlanner.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var tournament = await _context.Tournament.FindAsync(id);
+            if (tournament == null)
             {
                 return NotFound();
             }
-            ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "CompanyName", person.CompanyId);
-            ViewData["PersonTypeId"] = new SelectList(_context.Set<PersonType>(), "Id", "PersonTypeName", person.PersonTypeId);
-            return View(person);
+            return View(tournament);
         }
 
-        // POST: People/Edit/5
+        // POST: Tournaments/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,StreetAddress,ZipCode,City,Country,PhoneNumber1,PhoneNumber2,Email,PersonTypeId,CompanyId,PlayerPossition,SSN")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TournamentName")] Tournament tournament)
         {
-            if (id != person.Id)
+            if (id != tournament.Id)
             {
                 return NotFound();
             }
@@ -106,12 +99,12 @@ namespace PROPlanner.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(tournament);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.Id))
+                    if (!TournamentExists(tournament.Id))
                     {
                         return NotFound();
                     }
@@ -122,12 +115,10 @@ namespace PROPlanner.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "CompanyName", person.CompanyId);
-            ViewData["PersonTypeId"] = new SelectList(_context.Set<PersonType>(), "Id", "PersonTypeName", person.PersonTypeId);
-            return View(person);
+            return View(tournament);
         }
 
-        // GET: People/Delete/5
+        // GET: Tournaments/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,32 +126,30 @@ namespace PROPlanner.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.Company)
-                .Include(p => p.PersonType)
+            var tournament = await _context.Tournament
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (person == null)
+            if (tournament == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(tournament);
         }
 
-        // POST: People/Delete/5
+        // POST: Tournaments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-            _context.Person.Remove(person);
+            var tournament = await _context.Tournament.FindAsync(id);
+            _context.Tournament.Remove(tournament);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(int id)
+        private bool TournamentExists(int id)
         {
-            return _context.Person.Any(e => e.Id == id);
+            return _context.Tournament.Any(e => e.Id == id);
         }
     }
 }

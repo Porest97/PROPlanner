@@ -84,5 +84,12 @@ namespace PROPlanner.Models.RefModels
 
         [Display(Name = "Match")]
         public string MatchString { get { return string.Format("{0} {1} {2} {3}", TSMNumber, HomeTeam,"-", AwayTeam); } }
+
+        [Display(Name = "Tournament")]
+        public int? TournamentId { get; set; }
+        [Display(Name = "Tournament")]
+        [ForeignKey("TournamentId")]
+        public Tournament Tournament { get; set; }
+
     }
 }
