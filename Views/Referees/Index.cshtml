@@ -76,7 +76,7 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RefereeType.Id)
+                @Html.DisplayFor(modelItem => item.RefereeType.RefereeTypeName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
